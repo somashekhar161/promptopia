@@ -23,12 +23,12 @@ const Feed = () => {
   };
 
   useEffect(() => {
-    const fethcPost = async () => {
+    const fetchPost = async () => {
       const response = await fetch("/api/prompt");
       const data = await response.json();
       setPost(data);
     };
-    fethcPost();
+    fetchPost();
   }, []);
   return (
     <section className="feed">
